@@ -27,37 +27,7 @@ var SQLiteStorageHelper = (function ()
             self = this;
             dbName = name || dbName;
             dbLocation = location || "default";
-
             db = instanceDb();
-            self.executeBatch([Scripts.SC001, Scripts.SC002, Scripts.SC003]);
-            self.clearDb();
-            self.dropDb();
-
-            self.insert({
-                table: "Version",
-                data: [{ col: "AppVersion", val: 1 }]
-            });
-            self.insert({
-                table: "Version",
-                data: [{ col: "AppVersion", val: 2 }]
-            });
-            self.insert({
-                table: "Version",
-                data: [{ col: "AppVersion", val: 3 }]
-            });
-
-            self.update({
-                table: "Version",
-                data: [{ col: "AppVersion", val: 100 }],
-                where: [{ col: "AppVersion", val: 1 }]
-            });
-
-            self.select({
-                table: "Version",
-                where: [{ col: "AppVersion", val: 100 }]
-            });
-
-            self.select({ table: "Version" });
         },
 
         getDb: function () { return db; },
