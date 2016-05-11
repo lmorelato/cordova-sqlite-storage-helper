@@ -1,7 +1,7 @@
 # Cordova SQlite storage helper
 Helper tools for Cordova-sqlite-storage see: https://github.com/litehelpers/Cordova-sqlite-storage. 
 
-This tool allows using SQLite storage for mobile devices and web browsers. Its mechanism automatically selects the way needed for open databases using cordova-sqlite-storage plugin or the WebSQL implementation, depending on the platform.
+This tool allows using SQLite storage for mobile devices or web browsers. Its mechanism automatically selects the way needed for open databases using cordova-sqlite-storage plugin or WebSQL implementation, depending on the platform.
 
 ## Installation
 Add the folowing scripts in your page:
