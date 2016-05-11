@@ -17,13 +17,16 @@ Add the folowing scripts in your page:
         SQLiteStorageHelper.init("mydb.db", "default");
     }
 ```
-Little trick for test is a mobile device or web browser:
+
+Little trick checking a mobile device or web browser:
 ```
- if (DeviceInfo.isMobile) {
-            document.addEventListener("deviceready", this.onDeviceReady, false);
-        } else {
-            this.onDeviceReady(); //this is the browser
-        }
+bindEvents: function ()
+{
+    if (DeviceInfo.isMobile) 
+        document.addEventListener("deviceready", this.onDeviceReady, false);
+     else 
+        this.onDeviceReady(); //this is the browser
+},
 ```
 
 * getDb()
